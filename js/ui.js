@@ -87,6 +87,14 @@ $.fn.UiSlider = function () {
             enableAuto = true;
         });
 
+    $('.ui-slider-arrow')
+        .on('mouseover',function () {
+            enableAuto = false;
+        })
+        .on('mouseout',function () {
+            enableAuto = true;
+        });
+
     //具体操作
     wrap.on('move_prev',function () {
         if(current <= 0){
